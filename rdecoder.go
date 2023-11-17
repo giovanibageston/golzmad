@@ -6,7 +6,6 @@ import (
 
 type rangeDecoder struct {
 	reader io.Reader
-
 	range_ int32
 	code   int32
 }

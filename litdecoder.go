@@ -16,10 +16,9 @@ func (ld *literalDecoder) create(numPosBits, numPrevBits int32) {
 
 	ld.numPosBits = numPosBits
 	ld.posMask = (1 << numPosBits) - 1
-
 	ld.numPrevBits = numPrevBits
-	numStates := int32(1) << (ld.numPrevBits + ld.numPosBits)
 
+	numStates := int32(1) << (ld.numPrevBits + ld.numPosBits)
 	ld.coders = make([]*decoder2, numStates)
 
 	for i := int32(0); i < numStates; i++ {

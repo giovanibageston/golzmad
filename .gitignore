@@ -2,3 +2,4 @@
 cmd
 map.json
 map.json.lzma
+.gitignore

@@ -95,7 +95,7 @@ func (o *OutputWindow) CopyBlock(distance, length int) error {
 func (o *OutputWindow) PutByte(b int8) error {
 	o.buffer = append(o.buffer, byte(b))
 
-	if len(o.buffer) >= cap(o.buffer) {
+	if len(o.buffer) == cap(o.buffer) {
 		if err := o.FlushBuffer(); err != nil {
 			return err
 		}
